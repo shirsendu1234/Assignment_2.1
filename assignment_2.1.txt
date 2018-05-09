@@ -1,0 +1,26 @@
+1)export sas xport file into R using foreign package
+====================================================
+library(foreign)
+df <- read.xport("C:/carsdata/cars2.xpt")
+head(df)
+
+2)import sas data using haven package:
+======================================
+
+library(haven)
+
+
+# SAS
+
+read_sas("mtcars.sas7bdat")
+
+3)reading ARFF file :
+===================
+library(foreign)
+data <- read.arff("<Path to your file>")
+
+4)reading tsv/csv file
+========================
+
+library(readr)
+read.table(file = 'filename.tsv', sep = '\t', header = TRUE)
